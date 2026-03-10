@@ -1,4 +1,3 @@
-// Vercel private repo deploy test 2
 import { Layers } from 'lucide-react';
 
 export function Footer() {
