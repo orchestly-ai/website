@@ -13,6 +13,7 @@ export function Footer() {
           <a href="#how-it-works" className="transition-colors hover:text-gray-700 dark:hover:text-mono-body">How It Works</a>
           <a href="#integrations" className="transition-colors hover:text-gray-700 dark:hover:text-mono-body">Integrations</a>
           <a href="#cta" className="transition-colors hover:text-gray-700 dark:hover:text-mono-body">Contact</a>
+          <a href="https://github.com/orchestly-ai/platform" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-gray-700 dark:hover:text-mono-body">GitHub</a>
         </div>
       </div>
     </footer>

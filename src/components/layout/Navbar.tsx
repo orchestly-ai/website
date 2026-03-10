@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Layers, Sun, Moon } from 'lucide-react';
+import { Menu, X, Layers, Sun, Moon, Github } from 'lucide-react';
 import { useTheme } from '@/components/ui/ThemeProvider';
 
 const navLinks = [
@@ -32,6 +32,15 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://github.com/orchestly-ai/platform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg p-2 text-gray-500 dark:text-mono-secondary hover:bg-gray-100 dark:hover:bg-mono-surface/60 transition-colors"
+            aria-label="GitHub"
+          >
+            <Github className="h-4 w-4" />
+          </a>
           <button
             onClick={toggle}
             className="rounded-lg p-2 text-gray-500 dark:text-mono-secondary hover:bg-gray-100 dark:hover:bg-mono-surface/60 transition-colors"
@@ -48,6 +57,15 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
+          <a
+            href="https://github.com/orchestly-ai/platform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg p-2 text-gray-500 dark:text-mono-secondary hover:bg-gray-100 dark:hover:bg-mono-surface/60 transition-colors"
+            aria-label="GitHub"
+          >
+            <Github className="h-4 w-4" />
+          </a>
           <button
             onClick={toggle}
             className="rounded-lg p-2 text-gray-500 dark:text-mono-secondary hover:bg-gray-100 dark:hover:bg-mono-surface/60 transition-colors"

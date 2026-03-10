@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Github } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -20,7 +20,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-sm text-brand-600 dark:text-brand-300 mb-8"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-brand-400 animate-pulse" />
-          The control plane for AI agents
+          Open Source &middot; Apache 2.0
         </motion.div>
 
         <motion.h1
@@ -59,11 +59,13 @@ export function Hero() {
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="#how-it-works"
+            href="https://github.com/orchestly-ai/platform"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-mono-border bg-white/50 dark:bg-mono-surface/40 px-6 py-3 text-sm font-medium text-gray-700 dark:text-mono-body transition-all hover:bg-gray-100 dark:hover:bg-mono-surface/60"
           >
-            See How It Works
-            <ChevronDown className="h-4 w-4" />
+            <Github className="h-4 w-4" />
+            Star on GitHub
           </a>
         </motion.div>
       </div>
