@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Github } from 'lucide-react';
+import Image from 'next/image';
 
 export function Hero() {
   return (
@@ -106,6 +107,25 @@ export function Hero() {
               <p><span className="text-green-400">$</span> ADMIN_PASSWORD=admin123 USE_SQLITE=true python -m uvicorn backend.api.main:app</p>
               <p className="text-gray-500"># API ready at localhost:8000/docs</p>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Dashboard screenshot */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="mx-auto mt-10 max-w-5xl"
+        >
+          <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-mono-border shadow-2xl">
+            <Image
+              src="/images/screenshots/dashboard-overview.png"
+              alt="Orchestly Dashboard — monitor AI agents and workflows in real-time"
+              width={2560}
+              height={1600}
+              className="w-full h-auto"
+              priority
+            />
           </div>
         </motion.div>
       </div>
