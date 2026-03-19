@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown, Github } from 'lucide-react';
+import { ArrowRight, Github } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -52,10 +52,12 @@ export function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <a
-            href="#cta"
+            href="https://github.com/orchestly-ai/platform#quick-start"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-text transition-all hover:bg-cta-hover hover:shadow-lg hover:shadow-cta/25"
           >
-            Request Early Access
+            Get Started
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
@@ -67,6 +69,44 @@ export function Hero() {
             <Github className="h-4 w-4" />
             Star on GitHub
           </a>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-4"
+        >
+          <a
+            href="#cta"
+            className="text-sm text-gray-500 dark:text-mono-secondary hover:text-brand-500 dark:hover:text-brand-400 transition-colors"
+          >
+            or join the newsletter &rarr;
+          </a>
+        </motion.p>
+
+        {/* Terminal quickstart block */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mx-auto mt-12 max-w-2xl"
+        >
+          <div className="overflow-hidden rounded-xl border border-gray-800 bg-gray-950 shadow-2xl">
+            <div className="flex items-center gap-2 border-b border-gray-800 px-4 py-3">
+              <span className="h-3 w-3 rounded-full bg-red-500" />
+              <span className="h-3 w-3 rounded-full bg-yellow-500" />
+              <span className="h-3 w-3 rounded-full bg-green-500" />
+              <span className="ml-2 text-xs text-gray-500">terminal</span>
+            </div>
+            <div className="px-5 py-4 text-left font-mono text-sm leading-relaxed text-gray-300">
+              <p className="text-gray-500"># Clone and run in under 2 minutes</p>
+              <p><span className="text-green-400">$</span> git clone https://github.com/orchestly-ai/platform.git && cd platform</p>
+              <p><span className="text-green-400">$</span> pip install -r backend/requirements.txt</p>
+              <p><span className="text-green-400">$</span> ADMIN_PASSWORD=admin123 USE_SQLITE=true python -m uvicorn backend.api.main:app</p>
+              <p className="text-gray-500"># API ready at localhost:8000/docs</p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -38,17 +38,17 @@ export function CTA() {
             </div>
 
             <h2 className="text-3xl font-bold text-gray-900 dark:text-mono-text sm:text-4xl">
-              Ready to orchestrate your AI agents?
+              Stay in the loop
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-gray-600 dark:text-mono-body">
-              Join the early access program and be among the first to experience
-              the control plane for AI agents.
+              Get notified about new releases, features, and community events.
+              Monthly updates — no spam.
             </p>
 
             {submitted ? (
               <div className="mt-8 inline-flex items-center gap-2 rounded-lg border border-accent-500/30 bg-accent-500/10 px-6 py-3 text-sm text-accent-600 dark:text-accent-300">
                 <CheckCircle className="h-4 w-4" />
-                Thanks! We&apos;ll be in touch soon.
+                You&apos;re subscribed! Watch your inbox for updates.
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="mx-auto mt-8 flex max-w-lg flex-col gap-3">
@@ -63,7 +63,7 @@ export function CTA() {
                   />
                   <input
                     type="email"
-                    placeholder="Work email"
+                    placeholder="Email address"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -86,7 +86,7 @@ export function CTA() {
                     <Loader2 className="h-4 w-4 animate-spin" />
                   ) : (
                     <>
-                      Request Early Access
+                      Subscribe
                       <ArrowRight className="h-4 w-4" />
                     </>
                   )}
