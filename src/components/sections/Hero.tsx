@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Github } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
 export function Hero() {
@@ -21,7 +21,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-sm text-brand-600 dark:text-brand-300 mb-8"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-brand-400 animate-pulse" />
-          Open Source &middot; Apache 2.0
+          The control plane for AI agents
         </motion.div>
 
         <motion.h1
@@ -53,69 +53,27 @@ export function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <a
-            href="https://github.com/orchestly-ai/platform#quick-start"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#cta"
             className="inline-flex items-center gap-2 rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-text transition-all hover:bg-cta-hover hover:shadow-lg hover:shadow-cta/25"
           >
-            Get Started
+            Request Early Access
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="https://github.com/orchestly-ai/platform"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#how-it-works"
             className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-mono-border bg-white/50 dark:bg-mono-surface/40 px-6 py-3 text-sm font-medium text-gray-700 dark:text-mono-body transition-all hover:bg-gray-100 dark:hover:bg-mono-surface/60"
           >
-            <Github className="h-4 w-4" />
-            Star on GitHub
+            See How It Works
+            <ChevronDown className="h-4 w-4" />
           </a>
-        </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-4"
-        >
-          <a
-            href="#cta"
-            className="text-sm text-gray-500 dark:text-mono-secondary hover:text-brand-500 dark:hover:text-brand-400 transition-colors"
-          >
-            or join the newsletter &rarr;
-          </a>
-        </motion.p>
-
-        {/* Terminal quickstart block */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mx-auto mt-12 max-w-2xl"
-        >
-          <div className="overflow-hidden rounded-xl border border-gray-800 bg-gray-950 shadow-2xl">
-            <div className="flex items-center gap-2 border-b border-gray-800 px-4 py-3">
-              <span className="h-3 w-3 rounded-full bg-red-500" />
-              <span className="h-3 w-3 rounded-full bg-yellow-500" />
-              <span className="h-3 w-3 rounded-full bg-green-500" />
-              <span className="ml-2 text-xs text-gray-500">terminal</span>
-            </div>
-            <div className="px-5 py-4 text-left font-mono text-sm leading-relaxed text-gray-300">
-              <p className="text-gray-500"># Clone and run in under 2 minutes</p>
-              <p><span className="text-green-400">$</span> git clone https://github.com/orchestly-ai/platform.git && cd platform</p>
-              <p><span className="text-green-400">$</span> pip install -r backend/requirements.txt</p>
-              <p><span className="text-green-400">$</span> ADMIN_PASSWORD=admin123 USE_SQLITE=true python -m uvicorn backend.api.main:app</p>
-              <p className="text-gray-500"># API ready at localhost:8000/docs</p>
-            </div>
-          </div>
         </motion.div>
 
         {/* Dashboard screenshot */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          className="mx-auto mt-10 max-w-5xl"
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="mx-auto mt-16 max-w-5xl"
         >
           <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-mono-border shadow-2xl">
             <Image
