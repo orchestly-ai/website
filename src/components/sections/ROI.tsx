@@ -22,6 +22,16 @@ const metrics = [
     before: 'No visibility or control',
     after: 'Targeting 20-40% savings',
   },
+  {
+    metric: 'Workflow creation',
+    before: 'Hours of custom development',
+    after: '60+ ready-to-use templates',
+  },
+  {
+    metric: 'Integration setup',
+    before: 'Weeks of connector building',
+    after: '30+ native, one-click setup',
+  },
 ];
 
 export function ROI() {
@@ -39,7 +49,7 @@ export function ROI() {
           </div>
         </AnimateIn>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {metrics.map((item, i) => (
             <AnimateIn key={item.metric} delay={0.1 + i * 0.1}>
               <div className="rounded-xl border border-gray-200 dark:border-mono-border bg-white dark:bg-mono-surface/40 p-6 h-full">

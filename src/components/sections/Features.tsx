@@ -1,4 +1,4 @@
-import { GitBranch, Workflow, Store, DollarSign, UserCheck, Shield } from 'lucide-react';
+import { GitBranch, Workflow, Store, DollarSign, UserCheck, Shield, BookOpen, Code } from 'lucide-react';
 import { AnimateIn } from '@/components/ui/AnimateIn';
 
 const features = [
@@ -38,6 +38,18 @@ const features = [
     description:
       'SSO, RBAC, and BYOK encryption. Audit logs for every agent action. Designed with compliance in mind.',
   },
+  {
+    icon: BookOpen,
+    title: 'Template Catalog',
+    description:
+      '60+ pre-built workflow templates organized by team, use case, and industry. Sales, Engineering, HR, Support — find the right workflow in seconds.',
+  },
+  {
+    icon: Code,
+    title: 'Workflow Code View',
+    description:
+      'Build visually or in Python. Switch between drag-and-drop canvas and code view. Import, export, and version-control workflows as code.',
+  },
 ];
 
 export function Features() {
@@ -56,7 +68,7 @@ export function Features() {
           </div>
         </AnimateIn>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
             <AnimateIn key={feature.title} delay={0.1 + i * 0.08}>
               <div className="group rounded-xl border border-gray-200 dark:border-mono-border bg-white dark:bg-mono-surface/40 p-6 transition-all hover:border-brand-500/30 hover:bg-brand-50 dark:hover:bg-mono-surface/60">

@@ -1,5 +1,5 @@
 import { AnimateIn } from '@/components/ui/AnimateIn';
-import { Server } from 'lucide-react';
+import { Server, MessageSquare, FileSignature, Headset } from 'lucide-react';
 import {
   SiOpenai,
   SiAnthropic,
@@ -11,6 +11,22 @@ import {
   SiGithub,
   SiStripe,
   SiZendesk,
+  SiDiscord,
+  SiSendgrid,
+  SiTwilio,
+  SiJira,
+  SiAsana,
+  SiDatadog,
+  SiPagerduty,
+  SiShopify,
+  SiPostgresql,
+  SiMongodb,
+  SiGooglebigquery,
+  SiSnowflake,
+  SiAmazons3,
+  SiIntercom,
+  SiMailchimp,
+  SiNotion,
 } from 'react-icons/si';
 import type { IconType } from 'react-icons';
 
@@ -63,13 +79,61 @@ const llmProviders: Integration[] = [
   { name: 'Local Models', icon: Server, brandColor: '#8b8b8b' },
 ];
 
-const connectors: Integration[] = [
-  { name: 'Slack', icon: SiSlack, brandColor: '#e01e5a' },
-  { name: 'Salesforce', icon: SiSalesforce, brandColor: '#00a1e0' },
-  { name: 'HubSpot', icon: SiHubspot, brandColor: '#ff7a59' },
-  { name: 'GitHub', icon: SiGithub, brandColor: '#f0f0f0' },
-  { name: 'Stripe', icon: SiStripe, brandColor: '#635bff' },
-  { name: 'Zendesk', icon: SiZendesk, brandColor: '#17494d' },
+interface ConnectorCategory {
+  label: string;
+  items: Integration[];
+}
+
+const connectorCategories: ConnectorCategory[] = [
+  {
+    label: 'Communication',
+    items: [
+      { name: 'Slack', icon: SiSlack, brandColor: '#e01e5a' },
+      { name: 'Discord', icon: SiDiscord, brandColor: '#5865f2' },
+      { name: 'Microsoft Teams', icon: MessageSquare, brandColor: '#6264a7' },
+      { name: 'SendGrid', icon: SiSendgrid, brandColor: '#1a82e2' },
+      { name: 'Twilio', icon: SiTwilio, brandColor: '#f22f46' },
+    ],
+  },
+  {
+    label: 'Dev & IT',
+    items: [
+      { name: 'GitHub', icon: SiGithub, brandColor: '#f0f0f0' },
+      { name: 'Jira', icon: SiJira, brandColor: '#0052cc' },
+      { name: 'Asana', icon: SiAsana, brandColor: '#f06a6a' },
+      { name: 'Datadog', icon: SiDatadog, brandColor: '#632ca6' },
+      { name: 'PagerDuty', icon: SiPagerduty, brandColor: '#06ac38' },
+      { name: 'ServiceNow', icon: Headset, brandColor: '#81b5a1' },
+    ],
+  },
+  {
+    label: 'CRM & Sales',
+    items: [
+      { name: 'Salesforce', icon: SiSalesforce, brandColor: '#00a1e0' },
+      { name: 'HubSpot', icon: SiHubspot, brandColor: '#ff7a59' },
+      { name: 'Shopify', icon: SiShopify, brandColor: '#96bf48' },
+      { name: 'Stripe', icon: SiStripe, brandColor: '#635bff' },
+    ],
+  },
+  {
+    label: 'Data & Cloud',
+    items: [
+      { name: 'PostgreSQL', icon: SiPostgresql, brandColor: '#4169e1' },
+      { name: 'MongoDB', icon: SiMongodb, brandColor: '#47a248' },
+      { name: 'BigQuery', icon: SiGooglebigquery, brandColor: '#4386fa' },
+      { name: 'Snowflake', icon: SiSnowflake, brandColor: '#29b5e8' },
+      { name: 'AWS S3', icon: SiAmazons3, brandColor: '#569a31' },
+    ],
+  },
+  {
+    label: 'Business',
+    items: [
+      { name: 'DocuSign', icon: FileSignature, brandColor: '#ffcd00' },
+      { name: 'Intercom', icon: SiIntercom, brandColor: '#6afdef' },
+      { name: 'Mailchimp', icon: SiMailchimp, brandColor: '#ffe01b' },
+      { name: 'Notion', icon: SiNotion, brandColor: '#f0f0f0' },
+    ],
+  },
 ];
 
 function IntegrationCard({ item }: { item: Integration }) {
@@ -96,7 +160,7 @@ export function Integrations() {
               Works with your stack
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-600 dark:text-mono-body">
-              Connect any LLM provider and integrate with the tools your team already uses.
+              30+ native integrations. Connect any LLM provider and integrate with the tools your team already uses.
             </p>
           </div>
         </AnimateIn>
@@ -115,18 +179,20 @@ export function Integrations() {
             </div>
           </AnimateIn>
 
-          <AnimateIn delay={0.2}>
-            <div>
-              <h3 className="mb-6 text-center text-sm font-medium uppercase tracking-wider text-gray-500 dark:text-mono-secondary">
-                Connects To
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                {connectors.map((item) => (
-                  <IntegrationCard key={item.name} item={item} />
-                ))}
+          {connectorCategories.map((category, catIdx) => (
+            <AnimateIn key={category.label} delay={0.15 + catIdx * 0.05}>
+              <div>
+                <h3 className="mb-6 text-center text-sm font-medium uppercase tracking-wider text-gray-500 dark:text-mono-secondary">
+                  {category.label}
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
+                  {category.items.map((item) => (
+                    <IntegrationCard key={item.name} item={item} />
+                  ))}
+                </div>
               </div>
-            </div>
-          </AnimateIn>
+            </AnimateIn>
+          ))}
         </div>
       </div>
     </section>

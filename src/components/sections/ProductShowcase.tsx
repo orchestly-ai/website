@@ -14,7 +14,7 @@ const showcaseItems = [
   {
     title: 'Integrations Marketplace',
     description:
-      'Connect 20+ services out of the box — OpenAI, Anthropic, Google AI, Slack, GitHub, Jira, and more. One click to configure.',
+      'Connect 30+ services out of the box — OpenAI, Anthropic, Google AI, Slack, GitHub, Jira, and more. One click to configure.',
     image: '/images/screenshots/integrations.png',
     alt: 'Orchestly Integrations page showing OpenAI, Anthropic, and Google AI connectors',
   },
@@ -31,6 +31,13 @@ const showcaseItems = [
       'Monitor token usage and LLM spending across every provider. Set budgets, get alerts, and forecast costs before they surprise you.',
     image: '/images/screenshots/cost-management.png',
     alt: 'Orchestly Usage and Cost Tracking dashboard',
+  },
+  {
+    title: 'Template Catalog',
+    description:
+      'Browse 60+ workflow templates organized by team, use case, and industry. From lead qualification to incident response — deploy the right workflow in seconds.',
+    image: '/images/screenshots/template-catalog.png',
+    alt: 'Orchestly Template Catalog with 60+ workflow templates organized by category',
   },
 ];
 

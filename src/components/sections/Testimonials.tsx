@@ -20,9 +20,9 @@ const painPoints = [
 ];
 
 const proofPoints = [
+  { value: '30+', label: 'Native integrations' },
+  { value: '60+', label: 'Workflow templates' },
   { value: '7+', label: 'LLM providers supported' },
-  { value: 'Minutes', label: 'Target deploy time per agent' },
-  { value: 'Real-time', label: 'Per-agent cost tracking' },
 ];
 
 export function Testimonials() {

@@ -2,8 +2,8 @@ import { AnimateIn } from '@/components/ui/AnimateIn';
 
 const stats = [
   { value: '7+', label: 'LLM Providers Supported' },
-  { value: '20-40%', label: 'Target Cost Reduction' },
-  { value: '6+', label: 'Integration Connectors' },
+  { value: '30+', label: 'Native Integrations' },
+  { value: '60+', label: 'Workflow Templates' },
   { value: 'Enterprise', label: 'Security First' },
 ];
 
