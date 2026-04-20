@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     'Deploy, manage, and scale AI agents without the chaos. Multi-LLM routing, cost optimization, workflow automation, and enterprise security in one platform.',
   metadataBase: new URL('https://orchestly.ai'),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/favicon.svg',
   },
