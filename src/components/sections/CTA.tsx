@@ -42,7 +42,7 @@ export function CTA() {
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-gray-600 dark:text-mono-body">
               Get notified about new releases, features, and community events.
-              Monthly updates — no spam.
+              Monthly updates - no spam.
             </p>
 
             {submitted ? (

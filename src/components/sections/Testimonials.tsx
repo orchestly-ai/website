@@ -5,7 +5,7 @@ const painPoints = [
   {
     icon: AlertTriangle,
     title: 'Infrastructure overhead',
-    desc: 'Engineering teams report spending more time managing AI infrastructure than building products — juggling multiple LLM providers, each with separate APIs and billing.',
+    desc: 'Engineering teams report spending more time managing AI infrastructure than building products - juggling multiple LLM providers, each with separate APIs and billing.',
   },
   {
     icon: DollarSign,
@@ -15,13 +15,13 @@ const painPoints = [
   {
     icon: Clock,
     title: 'Slow time to production',
-    desc: 'Getting an AI agent from prototype to production takes months of DevOps work — custom integrations, monitoring, failover handling, and compliance checks.',
+    desc: 'Getting an AI agent from prototype to production takes months of DevOps work - custom integrations, monitoring, failover handling, and compliance checks.',
   },
 ];
 
 const proofPoints = [
-  { value: '30+', label: 'Native integrations' },
-  { value: '60+', label: 'Workflow templates' },
+  { value: '40+', label: 'Native integrations' },
+  { value: '16+', label: 'Workflow templates' },
   { value: '7+', label: 'LLM providers supported' },
 ];
 
@@ -32,7 +32,7 @@ export function Testimonials() {
         <AnimateIn>
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-mono-text sm:text-4xl">
-              Built for engineering teams
+              Built for every team
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-600 dark:text-mono-body">
               The challenges teams face when scaling AI agents today.

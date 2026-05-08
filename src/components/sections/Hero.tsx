@@ -21,7 +21,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-sm text-brand-600 dark:text-brand-300 mb-8"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-brand-400 animate-pulse" />
-          The control plane for AI agents
+          Build AI workflows visually
         </motion.div>
 
         <motion.h1
@@ -42,8 +42,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 dark:text-mono-body sm:text-xl"
         >
-          Think Kubernetes for AI agents. One platform to orchestrate every agent,
-          model, and workflow across your organization.
+          One platform to build, deploy, and manage AI agent workflows.
+          Visual canvas for your whole team. Code view when you need it.
         </motion.p>
 
         <motion.div
@@ -60,10 +60,10 @@ export function Hero() {
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="#how-it-works"
+            href="/product"
             className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-mono-border bg-white/50 dark:bg-mono-surface/40 px-6 py-3 text-sm font-medium text-gray-700 dark:text-mono-body transition-all hover:bg-gray-100 dark:hover:bg-mono-surface/60"
           >
-            See How It Works
+            Explore the Platform
             <ChevronDown className="h-4 w-4" />
           </a>
         </motion.div>
@@ -78,7 +78,7 @@ export function Hero() {
           <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-mono-border shadow-2xl">
             <Image
               src="/images/screenshots/dashboard-overview.png"
-              alt="Orchestly Dashboard — monitor AI agents and workflows in real-time"
+              alt="Orchestly Dashboard - monitor AI agents and workflows in real-time"
               width={2560}
               height={1600}
               className="w-full h-auto"

@@ -7,21 +7,21 @@ const showcaseItems = [
   {
     title: 'Visual Workflow Designer',
     description:
-      'Build complex agent pipelines with a drag-and-drop canvas. Add triggers, workers, conditions, and integrations — then connect them visually.',
+      'Build complex agent pipelines with a drag-and-drop canvas. Add triggers, workers, conditions, and integrations - then connect them visually.',
     image: '/images/screenshots/workflow-designer.png',
     alt: 'Orchestly Workflow Designer with trigger, worker, condition, and integration nodes',
   },
   {
     title: 'Integrations Marketplace',
     description:
-      'Connect 30+ services out of the box — OpenAI, Anthropic, Google AI, Slack, GitHub, Jira, and more. One click to configure.',
+      'Connect 40+ services out of the box - OpenAI, Anthropic, Google AI, Slack, GitHub, Jira, and more. One click to configure.',
     image: '/images/screenshots/integrations.png',
     alt: 'Orchestly Integrations page showing OpenAI, Anthropic, and Google AI connectors',
   },
   {
     title: 'Agent Marketplace',
     description:
-      'Discover and install pre-built agents and workflow templates. Content repurposers, ticket routers, code reviewers — ready to deploy.',
+      'Discover and install pre-built agents and workflow templates. Content repurposers, ticket routers, code reviewers - ready to deploy.',
     image: '/images/screenshots/marketplace.png',
     alt: 'Orchestly Marketplace with featured agents and workflow templates',
   },
@@ -35,9 +35,9 @@ const showcaseItems = [
   {
     title: 'Template Catalog',
     description:
-      'Browse 60+ workflow templates organized by team, use case, and industry. From lead qualification to incident response — deploy the right workflow in seconds.',
+      'Browse workflow templates organized by team, use case, and industry. From lead qualification to incident response - deploy the right workflow in seconds.',
     image: '/images/screenshots/template-catalog.png',
-    alt: 'Orchestly Template Catalog with 60+ workflow templates organized by category',
+    alt: 'Orchestly Template Catalog with workflow templates organized by category',
   },
 ];
 

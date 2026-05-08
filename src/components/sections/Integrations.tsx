@@ -1,5 +1,5 @@
 import { AnimateIn } from '@/components/ui/AnimateIn';
-import { Server, MessageSquare, FileSignature, Headset } from 'lucide-react';
+import { Server, MessageSquare, Headset, Bot, Cpu, Route, Image, Database, Globe, Mail, Newspaper, BarChart3, Calendar, TreePine, Plus } from 'lucide-react';
 import {
   SiOpenai,
   SiAnthropic,
@@ -27,6 +27,23 @@ import {
   SiIntercom,
   SiMailchimp,
   SiNotion,
+  SiLinear,
+  SiClickup,
+  SiConfluence,
+  SiAirtable,
+  SiGoogledocs,
+  SiGoogledrive,
+  SiDropbox,
+  SiX,
+  SiLinkedin,
+  SiReddit,
+  SiFacebook,
+  SiMedium,
+  SiWordpress,
+  SiRedis,
+  SiSupabase,
+  SiMixpanel,
+  SiGooglecloud,
 } from 'react-icons/si';
 import type { IconType } from 'react-icons';
 
@@ -76,6 +93,10 @@ const llmProviders: Integration[] = [
   { name: 'Meta Llama', icon: SiMeta, brandColor: '#0082fb' },
   { name: 'Mistral', icon: MistralIcon, brandColor: '#ff7000' },
   { name: 'Cohere', icon: CohereIcon, brandColor: '#6b9e8a' },
+  { name: 'DeepSeek', icon: Bot, brandColor: '#4d6bfe' },
+  { name: 'Groq', icon: Cpu, brandColor: '#f55036' },
+  { name: 'OpenRouter', icon: Route, brandColor: '#6366f1' },
+  { name: 'Stability AI', icon: Image, brandColor: '#ba45f0' },
   { name: 'Local Models', icon: Server, brandColor: '#8b8b8b' },
 ];
 
@@ -93,6 +114,7 @@ const connectorCategories: ConnectorCategory[] = [
       { name: 'Microsoft Teams', icon: MessageSquare, brandColor: '#6264a7' },
       { name: 'SendGrid', icon: SiSendgrid, brandColor: '#1a82e2' },
       { name: 'Twilio', icon: SiTwilio, brandColor: '#f22f46' },
+      { name: 'Resend', icon: Mail, brandColor: '#000000' },
     ],
   },
   {
@@ -100,6 +122,10 @@ const connectorCategories: ConnectorCategory[] = [
     items: [
       { name: 'GitHub', icon: SiGithub, brandColor: '#f0f0f0' },
       { name: 'Jira', icon: SiJira, brandColor: '#0052cc' },
+      { name: 'Linear', icon: SiLinear, brandColor: '#5e6ad2' },
+      { name: 'ClickUp', icon: SiClickup, brandColor: '#7b68ee' },
+      { name: 'Confluence', icon: SiConfluence, brandColor: '#1868db' },
+      { name: 'Monday', icon: Calendar, brandColor: '#ff3d57' },
       { name: 'Asana', icon: SiAsana, brandColor: '#f06a6a' },
       { name: 'Datadog', icon: SiDatadog, brandColor: '#632ca6' },
       { name: 'PagerDuty', icon: SiPagerduty, brandColor: '#06ac38' },
@@ -111,27 +137,49 @@ const connectorCategories: ConnectorCategory[] = [
     items: [
       { name: 'Salesforce', icon: SiSalesforce, brandColor: '#00a1e0' },
       { name: 'HubSpot', icon: SiHubspot, brandColor: '#ff7a59' },
-      { name: 'Shopify', icon: SiShopify, brandColor: '#96bf48' },
       { name: 'Stripe', icon: SiStripe, brandColor: '#635bff' },
+      { name: 'Zendesk', icon: SiZendesk, brandColor: '#03363d' },
+      { name: 'Pipedrive', icon: BarChart3, brandColor: '#1a1a1a' },
+      { name: 'Shopify', icon: SiShopify, brandColor: '#96bf48' },
     ],
   },
   {
-    label: 'Data & Cloud',
+    label: 'Data & Storage',
     items: [
       { name: 'PostgreSQL', icon: SiPostgresql, brandColor: '#4169e1' },
       { name: 'MongoDB', icon: SiMongodb, brandColor: '#47a248' },
+      { name: 'Redis', icon: SiRedis, brandColor: '#dc382d' },
+      { name: 'Supabase', icon: SiSupabase, brandColor: '#3ecf8e' },
+      { name: 'Pinecone', icon: TreePine, brandColor: '#000000' },
+      { name: 'Weaviate', icon: Database, brandColor: '#01cc74' },
       { name: 'BigQuery', icon: SiGooglebigquery, brandColor: '#4386fa' },
       { name: 'Snowflake', icon: SiSnowflake, brandColor: '#29b5e8' },
       { name: 'AWS S3', icon: SiAmazons3, brandColor: '#569a31' },
+      { name: 'Google Cloud', icon: SiGooglecloud, brandColor: '#4285f4' },
     ],
   },
   {
-    label: 'Business',
+    label: 'Productivity',
     items: [
-      { name: 'DocuSign', icon: FileSignature, brandColor: '#ffcd00' },
-      { name: 'Intercom', icon: SiIntercom, brandColor: '#6afdef' },
-      { name: 'Mailchimp', icon: SiMailchimp, brandColor: '#ffe01b' },
       { name: 'Notion', icon: SiNotion, brandColor: '#f0f0f0' },
+      { name: 'Airtable', icon: SiAirtable, brandColor: '#18bfff' },
+      { name: 'Google Docs', icon: SiGoogledocs, brandColor: '#4285f4' },
+      { name: 'Google Drive', icon: SiGoogledrive, brandColor: '#1fa463' },
+      { name: 'Dropbox', icon: SiDropbox, brandColor: '#0061fe' },
+    ],
+  },
+  {
+    label: 'Marketing & Social',
+    items: [
+      { name: 'Mailchimp', icon: SiMailchimp, brandColor: '#ffe01b' },
+      { name: 'Intercom', icon: SiIntercom, brandColor: '#6afdef' },
+      { name: 'Mixpanel', icon: SiMixpanel, brandColor: '#7856ff' },
+      { name: 'X / Twitter', icon: SiX, brandColor: '#f0f0f0' },
+      { name: 'LinkedIn', icon: SiLinkedin, brandColor: '#0a66c2' },
+      { name: 'Reddit', icon: SiReddit, brandColor: '#ff4500' },
+      { name: 'Facebook', icon: SiFacebook, brandColor: '#1877f2' },
+      { name: 'WordPress', icon: SiWordpress, brandColor: '#21759b' },
+      { name: 'Medium', icon: SiMedium, brandColor: '#f0f0f0' },
     ],
   },
 ];
@@ -160,7 +208,7 @@ export function Integrations() {
               Works with your stack
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-600 dark:text-mono-body">
-              30+ native integrations. Connect any LLM provider and integrate with the tools your team already uses.
+              40+ native integrations. Connect any LLM provider and integrate with the tools your team already uses.
             </p>
           </div>
         </AnimateIn>
@@ -171,7 +219,7 @@ export function Integrations() {
               <h3 className="mb-6 text-center text-sm font-medium uppercase tracking-wider text-gray-500 dark:text-mono-secondary">
                 LLM Providers
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
                 {llmProviders.map((item) => (
                   <IntegrationCard key={item.name} item={item} />
                 ))}
@@ -193,6 +241,26 @@ export function Integrations() {
               </div>
             </AnimateIn>
           ))}
+
+          {/* Request an Integration */}
+          <AnimateIn delay={0.5}>
+            <div className="flex flex-col items-center gap-4 pt-4">
+              <a
+                href="#cta"
+                className="group flex flex-col items-center gap-3 rounded-xl border-2 border-dashed border-gray-300 dark:border-mono-border bg-white/50 dark:bg-mono-surface/20 px-10 py-6 transition-all hover:border-brand-500/50 hover:bg-brand-50 dark:hover:bg-brand-500/5"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-mono-surface/60 text-gray-400 dark:text-mono-secondary group-hover:bg-brand-100 dark:group-hover:bg-brand-500/10 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                  <Plus className="h-5 w-5" />
+                </div>
+                <span className="text-sm font-medium text-gray-500 dark:text-mono-secondary group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                  Request an Integration
+                </span>
+              </a>
+              <p className="text-xs text-gray-400 dark:text-mono-secondary">
+                Don&apos;t see what you need? We&apos;re adding new integrations every week.
+              </p>
+            </div>
+          </AnimateIn>
         </div>
       </div>
     </section>

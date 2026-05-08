@@ -5,12 +5,12 @@ const deployOptions = [
   {
     icon: Monitor,
     title: 'Local Development',
-    description: 'SQLite, no Docker — up and running in 4 commands.',
+    description: 'SQLite, no Docker - up and running in 4 commands.',
     commands: [
-      'git clone https://github.com/orchestly-ai/platform.git && cd platform',
-      'python3 -m venv venv && source venv/bin/activate',
-      'pip install -r backend/requirements.txt',
-      'ADMIN_PASSWORD=admin123 USE_SQLITE=true python -m uvicorn backend.api.main:app',
+      'pip install orchestly',
+      'orchestly init my-project && cd my-project',
+      'orchestly configure',
+      'orchestly serve',
     ],
   },
   {
@@ -18,8 +18,8 @@ const deployOptions = [
     title: 'Docker Compose',
     description: 'Full stack with PostgreSQL, Redis, and monitoring.',
     commands: [
-      'git clone https://github.com/orchestly-ai/platform.git && cd platform',
-      'cp .env.example .env',
+      'pip install orchestly',
+      'orchestly init my-project --docker && cd my-project',
       'docker compose up',
     ],
   },

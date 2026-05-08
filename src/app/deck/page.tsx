@@ -398,7 +398,7 @@ export default function DeckPage() {
             {[
               { icon: Zap, title: 'AI Agent Explosion', desc: 'Every company is deploying AI agents. The number of models and agents per org is growing rapidly quarter over quarter.' },
               { icon: GitBranch, title: 'Multi-Model Reality', desc: 'No single LLM wins every use case. Teams need GPT-4, Claude, Gemini, and open-source models simultaneously.' },
-              { icon: DollarSign, title: 'Cost Pressure', desc: 'AI spend is the fastest-growing line item. CFOs demand visibility and optimization — there\'s no tool for this.' },
+              { icon: DollarSign, title: 'Cost Pressure', desc: 'AI spend is the fastest-growing line item. CFOs demand visibility and optimization - there\'s no tool for this.' },
               { icon: Shield, title: 'Enterprise Readiness', desc: 'Regulated industries need audit logs, RBAC, and compliance. Ad hoc agent deployments won\'t pass security review.' },
             ].map((item, i) => (
               <StaggerIn key={item.title} active={active(2)} delay={0.1 + i * 0.1}>
@@ -574,7 +574,7 @@ export default function DeckPage() {
                   <div className="rounded-lg border border-brand-500/20 bg-brand-500/5 p-3">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="h-2 w-2 rounded-full bg-brand-400 animate-pulse" />
-                      <span className="text-xs font-medium text-brand-400">Cost Alert — Support Agent</span>
+                      <span className="text-xs font-medium text-brand-400">Cost Alert - Support Agent</span>
                       <span className="ml-auto text-[10px] text-mono-body">Just now</span>
                     </div>
                     <div className="text-[11px] text-mono-body leading-relaxed">
@@ -633,7 +633,7 @@ export default function DeckPage() {
             {[
               { label: 'TAM', value: 50, suffix: 'B+', desc: 'AI infrastructure & MLOps market (growing 25%+ YoY)', width: '100%', color: 'from-brand-600/30 to-brand-500/10' },
               { label: 'SAM', value: 8, suffix: 'B', desc: 'AI agent orchestration & management tools', width: '65%', color: 'from-brand-500/40 to-brand-400/15' },
-              { label: 'SOM', value: 200, suffix: 'M', desc: 'Mid-market & growth-stage companies — our beachhead', width: '35%', color: 'from-accent-500/40 to-accent-400/15' },
+              { label: 'SOM', value: 200, suffix: 'M', desc: 'Mid-market & growth-stage companies - our beachhead', width: '35%', color: 'from-accent-500/40 to-accent-400/15' },
             ].map((tier, i) => (
               <StaggerIn key={tier.label} active={active(7)} delay={0.1 + i * 0.15}>
                 <div
@@ -792,7 +792,7 @@ export default function DeckPage() {
             {[
               {
                 title: 'Infrastructure overhead',
-                desc: 'Engineering teams report spending more time managing AI infrastructure than building products — juggling multiple LLM providers with separate APIs and billing.',
+                desc: 'Engineering teams report spending more time managing AI infrastructure than building products - juggling multiple LLM providers with separate APIs and billing.',
               },
               {
                 title: 'No cost visibility',

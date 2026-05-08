@@ -6,9 +6,9 @@ import { ThemeProvider } from '@/components/ui/ThemeProvider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Orchestly — The Control Plane for AI Agents',
+  title: 'Orchestly - AI Workflow Orchestration Platform',
   description:
-    'Deploy, manage, and scale AI agents without the chaos. Multi-LLM routing, cost optimization, workflow automation, and enterprise security in one platform.',
+    'Build, deploy, and manage AI agent workflows visually. Multi-LLM routing, cost optimization, drag-and-drop workflow designer, and enterprise security in one platform.',
   metadataBase: new URL('https://orchestly.ai'),
   alternates: {
     canonical: '/',
@@ -17,18 +17,18 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
   },
   openGraph: {
-    title: 'Orchestly — The Control Plane for AI Agents',
+    title: 'Orchestly - AI Workflow Orchestration Platform',
     description:
-      'Deploy, manage, and scale AI agents without the chaos. One platform to orchestrate every agent, model, and workflow.',
+      'Build, deploy, and manage AI agent workflows visually. One platform to orchestrate every agent, model, and workflow.',
     type: 'website',
     url: 'https://orchestly.ai',
     siteName: 'Orchestly',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orchestly — The Control Plane for AI Agents',
+    title: 'Orchestly - AI Workflow Orchestration Platform',
     description:
-      'Deploy, manage, and scale AI agents without the chaos. One platform to orchestrate every agent, model, and workflow.',
+      'Build, deploy, and manage AI agent workflows visually. One platform to orchestrate every agent, model, and workflow.',
   },
 };
 

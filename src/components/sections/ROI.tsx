@@ -25,12 +25,12 @@ const metrics = [
   {
     metric: 'Workflow creation',
     before: 'Hours of custom development',
-    after: '60+ ready-to-use templates',
+    after: 'Ready-to-use templates',
   },
   {
     metric: 'Integration setup',
     before: 'Weeks of connector building',
-    after: '30+ native, one-click setup',
+    after: '40+ native, one-click setup',
   },
 ];
 
