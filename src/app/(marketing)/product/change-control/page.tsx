@@ -1,16 +1,15 @@
 'use client';
 
-import { GitBranch, History, UserCheck, Shield } from 'lucide-react';
+import { GitBranch, History, UserCheck, Shield, Eye, FileText } from 'lucide-react';
 import { FeaturePage } from '@/components/product/FeaturePage';
-import { MockupChangeControl } from '@/components/mockups/MockupChangeControl';
 
 export default function ChangeControlPage() {
   return (
     <FeaturePage
       title="Change Control"
       tagline="Version Everything"
-      description="Git-like versioning for your AI workflows. See exactly what changed, who approved it, and roll back to any previous version instantly."
-      heroMockup={<MockupChangeControl />}
+      description="Git-like versioning for your AI workflows. See exactly what changed, who approved it, and roll back to any previous version instantly. Visual diffs, property-level diffs, and code-level diffs - all in one place."
+      heroImage="/images/screenshots/change-control-overview.png"
       capabilities={[
         {
           icon: GitBranch,
@@ -32,12 +31,32 @@ export default function ChangeControlPage() {
           title: 'Audit Trail',
           description: 'Complete audit log of every change, approval, deployment, and rollback. Know who changed what and when for compliance and debugging.',
         },
+        {
+          icon: Eye,
+          title: 'Risk & Cost Analysis',
+          description: 'Every change request gets an automated risk score and projected cost impact. See how model swaps, new nodes, or config changes affect your budget before merging.',
+        },
+        {
+          icon: FileText,
+          title: 'AI-Generated Summaries',
+          description: 'Generate plain-English summaries of complex workflow changes with one click. Reviewers can quickly understand the scope and impact without reading every diff line.',
+        },
       ]}
       sections={[
         {
-          title: 'Move fast without breaking things',
-          description: 'Change control gives your team confidence to iterate quickly. Developers can experiment freely in staging while production stays stable behind approval gates. When something slips through, rollback takes seconds.',
-          mockup: <MockupChangeControl />,
+          title: 'Visual canvas diff - see exactly what changed',
+          description: 'Compare workflow versions side-by-side on the canvas. Added nodes are highlighted in green, removed in red, modified in yellow, and moved in blue. Click any node to drill into its field-level changes. Both base and head versions are rendered with full React Flow canvases.',
+          image: '/images/screenshots/change-control-canvas-diff.png',
+        },
+        {
+          title: 'Property-level diffs - every field, every change',
+          description: 'The properties lens breaks down changes by category: added nodes, removed nodes, modified nodes, edge changes, variable updates, and trigger modifications. Expand any node to see the exact before/after values for every changed field - model swaps, prompt rewrites, config updates, all shown in red and green.',
+          image: '/images/screenshots/change-control-properties-diff.png',
+        },
+        {
+          title: 'Code diff - review changes as Python, TypeScript, or Java',
+          description: 'Workflows are decompiled into SDK code and shown as a traditional code diff with line-by-line annotations. Toggle between Python, TypeScript, and Java. Red lines show removed code, green lines show additions. Copy either version to your clipboard, or use it as a reference to reproduce the workflow in your own codebase.',
+          image: '/images/screenshots/change-control-code-diff.png',
         },
       ]}
     />

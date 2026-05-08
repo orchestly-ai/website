@@ -46,8 +46,8 @@ export default function WorkflowDesignerPage() {
       ]}
       sections={[
         {
-          title: 'Write it in Python, TypeScript, or Java — see it on the canvas',
-          description: 'The code view gives you full SDK access to define workflows programmatically in your language of choice. Every code change is reflected on the visual canvas in real-time. Engineers can use their preferred editor, commit workflow files to git, and run them in CI/CD pipelines — while the rest of the team follows along on the canvas.',
+          title: 'Write it in Python, TypeScript, or Java - see it on the canvas',
+          description: 'The code view gives you full SDK access to define workflows programmatically in your language of choice. Every code change is reflected on the visual canvas in real-time. Engineers can use their preferred editor, commit workflow files to git, and run them in CI/CD pipelines - while the rest of the team follows along on the canvas.',
           mockup: <WorkflowViewSwitcher />,
         },
         {

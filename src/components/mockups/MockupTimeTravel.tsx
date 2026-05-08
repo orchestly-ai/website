@@ -6,8 +6,8 @@ export function MockupTimeTravel() {
     { id: 2, name: 'Extract: Parse Ticket', time: '120ms', status: 'completed', data: '{ "category": "billing", "sentiment": -0.72 }' },
     { id: 3, name: 'Route: LLM Classification', time: '845ms', status: 'completed', data: '{ "model": "claude-3.5", "tokens": 342, "label": "refund" }' },
     { id: 4, name: 'Action: CRM Lookup', time: '1.2s', status: 'active', data: '{ "customer": "Acme Corp", "tier": "Enterprise" }' },
-    { id: 5, name: 'Decision: Approval Gate', time: '—', status: 'pending', data: null },
-    { id: 6, name: 'Action: Resolve Ticket', time: '—', status: 'pending', data: null },
+    { id: 5, name: 'Decision: Approval Gate', time: '-', status: 'pending', data: null },
+    { id: 6, name: 'Action: Resolve Ticket', time: '-', status: 'pending', data: null },
   ];
 
   return (
