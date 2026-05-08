@@ -6,7 +6,7 @@ export default function ComparePortkeyPage() {
   return (
     <ComparisonPage
       competitor="Portkey"
-      competitorDescription="Portkey is an AI gateway that provides LLM routing, caching, and observability for LLM API calls."
+      competitorDescription="Portkey is an AI gateway that provides LLM routing to 1,600+ models, caching, guardrails, and observability for LLM API calls. Being acquired by Palo Alto Networks in 2026."
       headline="Orchestly is a complete AI orchestration platform. Portkey is an LLM gateway layer focused on API management."
       subheadline="Where Orchestly shines"
       rows={[
@@ -17,9 +17,9 @@ export default function ComparePortkeyPage() {
         { feature: 'LLM Caching', orchestly: true, competitor: true },
         { feature: 'Cost Tracking', orchestly: true, competitor: true },
         { feature: 'Prompt Management', orchestly: true, competitor: true },
-        { feature: 'Workflow Templates', orchestly: '16+', competitor: false },
+        { feature: 'Workflow Templates', orchestly: '74+', competitor: false },
         { feature: 'Agent Marketplace', orchestly: true, competitor: false },
-        { feature: 'SaaS Integrations', orchestly: '40+', competitor: false },
+        { feature: 'SaaS Integrations', orchestly: '57+', competitor: false },
         { feature: 'Time-Travel Debugging', orchestly: true, competitor: false },
         { feature: 'Change Control', orchestly: true, competitor: false },
         { feature: 'Human-in-the-Loop', orchestly: true, competitor: false },
@@ -37,7 +37,7 @@ export default function ComparePortkeyPage() {
         },
         {
           title: 'SaaS integrations built in',
-          description: 'Connect your AI workflows to Slack, GitHub, Jira, databases, and 40+ services. Portkey focuses exclusively on LLM providers - you need additional tools for everything else.',
+          description: 'Connect your AI workflows to Slack, GitHub, Jira, databases, and 57+ services. Portkey integrates with 45+ AI providers and 8+ agent frameworks, but focuses on the LLM layer - you need additional tools for SaaS connectivity.',
         },
         {
           title: 'Templates and marketplace',

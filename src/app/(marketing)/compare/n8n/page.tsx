@@ -20,10 +20,10 @@ export default function CompareN8nPage() {
         { feature: 'Change Control & Versioning', orchestly: true, competitor: 'partial' },
         { feature: 'Prompt Management', orchestly: true, competitor: false },
         { feature: 'SSO / SAML', orchestly: true, competitor: true },
-        { feature: 'BYOK Encryption', orchestly: true, competitor: false },
+        { feature: 'BYOK Encryption', orchestly: true, competitor: 'partial' },
         { feature: 'Self-Hosted Option', orchestly: true, competitor: true },
-        { feature: 'Pre-Built Integrations', orchestly: '40+', competitor: '400+' },
-        { feature: 'AI-Specific Templates', orchestly: '16+', competitor: '10+' },
+        { feature: 'Pre-Built Integrations', orchestly: '57+', competitor: '400+' },
+        { feature: 'AI-Specific Templates', orchestly: '74+', competitor: '50+' },
       ]}
       advantages={[
         {
@@ -40,7 +40,7 @@ export default function CompareN8nPage() {
         },
         {
           title: 'Enterprise-grade AI governance',
-          description: 'Change control with approval gates, BYOK encryption, comprehensive audit logs, and RBAC designed for AI workflows. n8n offers basic auth and community-maintained security.',
+          description: 'Change control with approval gates, BYOK encryption, comprehensive audit logs, and RBAC designed for AI workflows. n8n Enterprise offers SSO/SAML and RBAC, but lacks AI-specific governance like prompt versioning and model cost controls.',
         },
       ]}
     />

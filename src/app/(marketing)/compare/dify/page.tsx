@@ -17,14 +17,14 @@ export default function CompareDifyPage() {
         { feature: 'Cost Management', orchestly: true, competitor: false },
         { feature: 'Change Control', orchestly: true, competitor: false },
         { feature: 'Time-Travel Debugging', orchestly: true, competitor: false },
-        { feature: 'Agent Marketplace', orchestly: true, competitor: 'partial' },
-        { feature: 'SSO / SAML', orchestly: true, competitor: false },
-        { feature: 'RBAC', orchestly: true, competitor: 'partial' },
+        { feature: 'Agent Marketplace', orchestly: true, competitor: true },
+        { feature: 'SSO / SAML', orchestly: true, competitor: true },
+        { feature: 'RBAC', orchestly: true, competitor: true },
         { feature: 'BYOK Encryption', orchestly: true, competitor: false },
-        { feature: 'Audit Logs', orchestly: true, competitor: false },
-        { feature: 'SaaS Integrations', orchestly: '40+', competitor: '10+' },
+        { feature: 'Audit Logs', orchestly: true, competitor: true },
+        { feature: 'SaaS Integrations', orchestly: '57+', competitor: '20+' },
         { feature: 'RAG Pipeline', orchestly: true, competitor: true },
-        { feature: 'Enterprise Support', orchestly: true, competitor: 'partial' },
+        { feature: 'Enterprise Support', orchestly: true, competitor: true },
       ]}
       advantages={[
         {
@@ -33,7 +33,7 @@ export default function CompareDifyPage() {
         },
         {
           title: 'Enterprise-ready from day one',
-          description: 'SSO/SAML, RBAC, BYOK encryption, audit logs, and SOC 2 compliance built in. Dify requires significant self-hosting configuration to meet enterprise security requirements.',
+          description: 'BYOK encryption, change control with approval gates, and AI-specific governance features like prompt versioning and model cost controls. Dify Enterprise offers SSO and RBAC, but lacks AI workflow-specific governance tools.',
         },
         {
           title: 'Production-grade cost controls',
@@ -41,7 +41,7 @@ export default function CompareDifyPage() {
         },
         {
           title: 'Deep SaaS integrations',
-          description: 'Connect your AI workflows to Slack, GitHub, Jira, Salesforce, and 40+ services with managed OAuth. Dify focuses on LLM providers and data sources but lacks broad SaaS connectivity.',
+          description: 'Connect your AI workflows to Slack, GitHub, Jira, Salesforce, and 57+ services with managed OAuth. Dify supports MCP protocol integrations and has a plugin marketplace, but offers fewer pre-built SaaS connectors for business tools.',
         },
       ]}
     />
