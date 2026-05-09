@@ -2,7 +2,6 @@
 
 import { Clock, Play, Database, Search } from 'lucide-react';
 import { FeaturePage } from '@/components/product/FeaturePage';
-import { MockupTimeTravel } from '@/components/mockups/MockupTimeTravel';
 
 export default function TimeTravelPage() {
   return (
@@ -10,7 +9,7 @@ export default function TimeTravelPage() {
       title="Time-Travel Debugging"
       tagline="Replay & Inspect"
       description="Replay any workflow execution step-by-step. Inspect the full state at every node, compare runs, and debug agent behavior with complete visibility."
-      heroMockup={<MockupTimeTravel />}
+      heroImage="/images/screenshots/time-travel-detail.png"
       capabilities={[
         {
           icon: Play,
@@ -35,9 +34,9 @@ export default function TimeTravelPage() {
       ]}
       sections={[
         {
-          title: 'Debug AI agents like software',
-          description: 'AI agents are notoriously hard to debug. Time-travel gives you the same debugging experience you expect from traditional software - breakpoints, state inspection, and deterministic replay - applied to non-deterministic AI workflows.',
-          mockup: <MockupTimeTravel />,
+          title: 'Every run, fully visible',
+          description: 'The Runs dashboard shows every workflow execution with status, duration, cost, and timestamp. Filter by completed, failed, or running. Search by workflow name. Click any run to drill into the step-by-step execution timeline with full state inspection at every node.',
+          image: '/images/screenshots/time-travel-runs.png',
         },
       ]}
     />

@@ -146,27 +146,32 @@ export default function IntegrationsPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-brand-600/10 blur-[120px]" />
         </div>
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <AnimateIn>
+          <AnimateIn>
+            <div className="max-w-3xl">
               <p className="text-sm font-semibold text-brand-600 dark:text-brand-400 mb-3">Connect Everything</p>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-mono-text sm:text-5xl">
                 Integrations
               </h1>
-              <p className="mt-6 text-lg text-gray-600 dark:text-mono-body">
+              <p className="mt-6 text-lg text-gray-600 dark:text-mono-body leading-relaxed max-w-2xl">
                 Connect your AI workflows to {integrations.length} services out of the box. LLM providers, databases, SaaS tools, and custom APIs - all with managed OAuth and one-click setup.
               </p>
-              <div className="mt-8">
-                <a href="#cta" className="inline-flex items-center gap-2 rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-text transition-all hover:bg-cta-hover hover:shadow-lg hover:shadow-cta/25">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="#cta" className="inline-flex items-center justify-center gap-2 rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-text transition-all hover:bg-cta-hover hover:shadow-lg hover:shadow-cta/25">
                   Request Early Access <ArrowRight className="h-4 w-4" />
                 </a>
+                <a href="/pricing" className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 dark:border-mono-border bg-white/50 dark:bg-mono-surface/40 px-6 py-3 text-sm font-medium text-gray-700 dark:text-mono-body transition-all hover:bg-gray-100 dark:hover:bg-mono-surface/60">
+                  View Pricing
+                </a>
               </div>
-            </AnimateIn>
-            <AnimateIn delay={0.15}>
-              <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-mono-border shadow-2xl">
-                <Image src="/images/screenshots/integrations.png" alt="Integrations dashboard" width={1200} height={800} className="w-full h-auto" />
+            </div>
+          </AnimateIn>
+          <AnimateIn delay={0.2}>
+            <div className="mt-14">
+              <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-mono-border shadow-2xl">
+                <Image src="/images/screenshots/integrations.png" alt="Integrations dashboard" width={2560} height={1600} className="w-full h-auto" priority />
               </div>
-            </AnimateIn>
-          </div>
+            </div>
+          </AnimateIn>
         </div>
       </section>
 

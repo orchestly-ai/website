@@ -2,7 +2,6 @@
 
 import { Shield, Lock, Users, FileText } from 'lucide-react';
 import { FeaturePage } from '@/components/product/FeaturePage';
-import { MockupSecurityDashboard } from '@/components/mockups/MockupSecurityDashboard';
 
 export default function SecurityPage() {
   return (
@@ -10,7 +9,7 @@ export default function SecurityPage() {
       title="Security"
       tagline="Enterprise Grade"
       description="SSO, RBAC, BYOK encryption, and comprehensive audit logging. Orchestly is built for organizations that take security and compliance seriously."
-      heroMockup={<MockupSecurityDashboard />}
+      heroImage="/images/screenshots/security-audit-logs.png"
       capabilities={[
         {
           icon: Users,
@@ -30,14 +29,14 @@ export default function SecurityPage() {
         {
           icon: FileText,
           title: 'Audit Logs & Compliance',
-          description: 'Every action is logged - deployments, config changes, data access, and API calls. SOC 2 Type II compliant with configurable retention policies.',
+          description: 'Every action is logged with severity, timestamp, user, and IP address. Filter by time range, search by action or user, and export logs as CSV or JSON. SOC 2 Type II compliant with configurable retention policies.',
         },
       ]}
       sections={[
         {
-          title: 'Security from the ground up',
-          description: 'Orchestly was designed for enterprise security from day one. Every credential is encrypted at rest and in transit. Every API call is authenticated and authorized. Every action is logged and auditable.',
-          mockup: <MockupSecurityDashboard />,
+          title: 'Complete audit trail for every action',
+          description: 'The Audit Logs dashboard tracks all system changes and user actions across your organization. See total logs, unique users, success/warning/error counts, and security events at a glance. Search and filter by action type, user, or time range. Click any entry to see the full diff of what changed. Export to CSV or JSON for compliance reporting.',
+          image: '/images/screenshots/security-audit-logs.png',
         },
       ]}
     />
