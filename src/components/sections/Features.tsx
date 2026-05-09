@@ -1,8 +1,15 @@
-import { GitBranch, Workflow, Store, DollarSign, UserCheck, Shield, BookOpen, Code, ArrowRight } from 'lucide-react';
+import { GitBranch, Workflow, Store, DollarSign, Shield, Zap, Clock, Activity, ArrowRight } from 'lucide-react';
 import { AnimateIn } from '@/components/ui/AnimateIn';
 import Link from 'next/link';
 
 const features = [
+  {
+    icon: Workflow,
+    title: 'Visual Workflow Designer',
+    description:
+      'Design AI workflows with a drag-and-drop canvas or write them in Python, TypeScript, or Java. Switch between visual and code view anytime.',
+    href: '/product/workflow-designer',
+  },
   {
     icon: GitBranch,
     title: 'Multi-LLM Routing & Failover',
@@ -11,53 +18,46 @@ const features = [
     href: '/product/llm-routing',
   },
   {
-    icon: Workflow,
-    title: 'Visual Workflow Builder',
+    icon: Clock,
+    title: 'Change Control',
     description:
-      'Design your own AI workflows with a drag-and-drop canvas. No coding required. Chain agents, add conditions, and handle errors - anyone on your team can build.',
-    href: '/product/workflow-designer',
+      'Git-like versioning with visual diffs, property diffs, and code diffs. Approval gates and instant rollback for every workflow change.',
+    href: '/product/change-control',
+  },
+  {
+    icon: Zap,
+    title: 'Integrations',
+    description:
+      'Connect 57+ services out of the box - LLM providers, databases, SaaS tools, and APIs. Managed OAuth and one-click setup.',
+    href: '/product/integrations',
   },
   {
     icon: Store,
-    title: 'Agent Marketplace & Registry',
+    title: 'Agent Marketplace',
     description:
-      'Discover, publish, and reuse agents across your organization. Version control and rollback built in.',
+      'Discover, publish, and reuse agents across your organization. Pre-built workflow templates for every team.',
     href: '/product/marketplace',
   },
   {
-    icon: DollarSign,
-    title: 'Cost Tracking & Optimization',
+    icon: Activity,
+    title: 'Time-Travel Debugging',
     description:
-      'Real-time visibility into per-agent, per-model spending. Set budgets, alerts, and automatically optimize for cost.',
-    href: '/product/cost-management',
+      'Replay any execution step-by-step with full state inspection. See exactly what happened at every node.',
+    href: '/product/time-travel',
   },
   {
-    icon: UserCheck,
-    title: 'Human-in-the-Loop Approvals',
+    icon: DollarSign,
+    title: 'Cost Management',
     description:
-      'Define approval gates for high-stakes decisions. Agents pause and wait for human review when it matters.',
-    href: '/product/change-control',
+      'Real-time visibility into per-model, per-workflow spending. Set budgets, alerts, and optimize costs automatically.',
+    href: '/product/cost-management',
   },
   {
     icon: Shield,
     title: 'Enterprise Security',
     description:
-      'SSO, RBAC, and BYOK encryption. Audit logs for every agent action. Designed with compliance in mind.',
+      'SSO/SAML, RBAC, BYOK encryption, and comprehensive audit logs. Designed with compliance in mind.',
     href: '/product/security',
-  },
-  {
-    icon: BookOpen,
-    title: 'Template Catalog',
-    description:
-      'Pre-built workflow templates organized by team, use case, and industry. Sales, Engineering, HR, Support - find the right workflow in seconds.',
-    href: '/templates',
-  },
-  {
-    icon: Code,
-    title: 'Workflow Code View',
-    description:
-      'Build visually or in Python. Switch between drag-and-drop canvas and code view. Import, export, and version-control workflows as code.',
-    href: '/product/workflow-designer',
   },
 ];
 

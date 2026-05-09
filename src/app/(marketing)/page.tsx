@@ -2,7 +2,6 @@ import { Hero } from '@/components/sections/Hero';
 import { StatsBar } from '@/components/sections/StatsBar';
 import { Problem } from '@/components/sections/Problem';
 import { Features } from '@/components/sections/Features';
-import { ProductShowcase } from '@/components/sections/ProductShowcase';
 import { HowItWorks } from '@/components/sections/HowItWorks';
 import { Integrations } from '@/components/sections/Integrations';
 import { ROI } from '@/components/sections/ROI';
@@ -16,7 +15,6 @@ export default function HomePage() {
       <StatsBar />
       <Problem />
       <Features />
-      <ProductShowcase />
       <HowItWorks />
       <Integrations />
       <ROI />

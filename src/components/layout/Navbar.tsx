@@ -27,7 +27,7 @@ const productFeatures: DropdownItem[] = [
   { label: 'Workflow Designer', href: '/product/workflow-designer', description: 'Visual drag-and-drop canvas', icon: Workflow },
   { label: 'LLM Routing', href: '/product/llm-routing', description: 'Multi-model routing & failover', icon: GitBranch },
   { label: 'Change Control', href: '/product/change-control', description: 'Versioning & approval gates', icon: Clock },
-  { label: 'Integrations', href: '/product/integrations', description: '40+ pre-built connectors', icon: Zap },
+  { label: 'Integrations', href: '/product/integrations', description: '57+ pre-built connectors', icon: Zap },
   { label: 'Marketplace', href: '/product/marketplace', description: 'Agent registry & templates', icon: Store },
   { label: 'Time-Travel', href: '/product/time-travel', description: 'Execution replay & debugging', icon: Activity },
   { label: 'Cost Management', href: '/product/cost-management', description: 'Budget tracking & alerts', icon: DollarSign },
@@ -40,10 +40,7 @@ const navItems: NavDropdown[] = [
     columns: [
       {
         heading: 'Platform',
-        items: [
-          { label: 'Platform Overview', href: '/product', description: 'Everything in one place', icon: Layers },
-          ...productFeatures,
-        ],
+        items: productFeatures,
       },
     ],
   },
