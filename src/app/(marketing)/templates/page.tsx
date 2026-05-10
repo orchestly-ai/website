@@ -1,7 +1,7 @@
 'use client';
 
-import { Suspense, useState, useMemo, useEffect, useCallback } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { Suspense, useState, useMemo, useCallback } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { Search, ArrowRight, X, Eye } from 'lucide-react';
 import Image from 'next/image';
 import { AnimateIn } from '@/components/ui/AnimateIn';
@@ -115,11 +115,34 @@ const industryToCategories: Record<string, string[]> = {
   'technology': ['Engineering', 'Data', 'Security'],
 };
 
+const industryLabels: Record<string, string> = {
+  'financial-services': 'Financial Services',
+  'healthcare': 'Healthcare',
+  'technology': 'Technology',
+};
+
+const useCaseLabels: Record<string, string> = {
+  'content-creation': 'Content Creation',
+  'customer-support': 'Customer Support',
+  'data-pipeline': 'Data Pipeline',
+  'document-processing': 'Document Processing',
+  'code-review': 'Code Review',
+  'lead-qualification': 'Lead Qualification',
+};
+
 function TemplatesContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   const useCaseParam = searchParams.get('useCase');
   const industryParam = searchParams.get('industry');
+
+  const hasFilter = !!(useCaseParam || industryParam);
+  const filterLabel = useCaseParam
+    ? useCaseLabels[useCaseParam] || useCaseParam
+    : industryParam
+    ? industryLabels[industryParam] || industryParam
+    : null;
 
   const [activeCategory, setActiveCategory] = useState(() => {
     if (useCaseParam && useCaseToCategory[useCaseParam]) {
@@ -131,6 +154,10 @@ function TemplatesContent() {
   const [previewTemplate, setPreviewTemplate] = useState<Template | null>(null);
 
   const handleClose = useCallback(() => setPreviewTemplate(null), []);
+
+  const clearFilter = useCallback(() => {
+    router.push('/templates');
+  }, [router]);
 
   const filtered = useMemo(() => {
     const industryCategories = industryParam ? industryToCategories[industryParam] : null;
@@ -173,6 +200,22 @@ function TemplatesContent() {
       {/* Filter + Gallery */}
       <section className="border-t border-gray-200 dark:border-mono-border py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-6">
+          {/* Active filter banner */}
+          {hasFilter && (
+            <div className="mb-6 flex items-center gap-3 rounded-lg border border-brand-500/30 bg-brand-50 dark:bg-brand-500/10 px-4 py-3">
+              <p className="text-sm text-gray-700 dark:text-mono-body">
+                Showing templates for <span className="font-semibold text-brand-600 dark:text-brand-400">{filterLabel}</span>
+              </p>
+              <button
+                onClick={clearFilter}
+                className="ml-auto flex items-center gap-1 rounded-md px-3 py-1 text-xs font-medium text-gray-600 dark:text-mono-muted hover:bg-gray-200 dark:hover:bg-mono-surface/60 transition-colors"
+              >
+                <X className="h-3 w-3" />
+                Show all
+              </button>
+            </div>
+          )}
+
           {/* Search */}
           <div className="mb-6">
             <div className="relative max-w-md">
@@ -203,6 +246,13 @@ function TemplatesContent() {
               </button>
             ))}
           </div>
+
+          {/* Result count */}
+          {(hasFilter || search || activeCategory !== 'All') && (
+            <p className="mb-4 text-sm text-gray-500 dark:text-mono-muted">
+              {filtered.length} template{filtered.length !== 1 ? 's' : ''} found
+            </p>
+          )}
 
           {/* Template grid */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

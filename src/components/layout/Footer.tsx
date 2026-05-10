@@ -43,7 +43,7 @@ const footerColumns = [
     links: [
       { label: 'About', href: '/about' },
       { label: 'Enterprise', href: '/enterprise' },
-      { label: 'Contact', href: 'mailto:hello@orchestly.ai' },
+      { label: 'Contact', href: '#cta' },
     ],
   },
 ];

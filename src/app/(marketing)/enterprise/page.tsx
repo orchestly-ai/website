@@ -35,10 +35,10 @@ export default function EnterprisePage() {
             </p>
             <div className="mt-8 flex justify-center gap-4">
               <a
-                href="mailto:sales@orchestly.ai?subject=Enterprise%20Inquiry"
+                href="#cta"
                 className="inline-flex items-center gap-2 rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-text transition-all hover:bg-cta-hover hover:shadow-lg hover:shadow-cta/25"
               >
-                Talk to Sales
+                Request Early Access
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
@@ -106,58 +106,6 @@ export default function EnterprisePage() {
         </div>
       </section>
 
-      {/* Contact form */}
-      <section className="border-t border-gray-200 dark:border-mono-border py-20 sm:py-28 bg-gray-50/50 dark:bg-mono-surface/20">
-        <div className="mx-auto max-w-xl px-6">
-          <AnimateIn>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-mono-text text-center mb-2">
-              Talk to Sales
-            </h2>
-            <p className="text-center text-gray-600 dark:text-mono-body mb-8">
-              Tell us about your requirements and we&apos;ll get back to you within one business day.
-            </p>
-            <form
-              action="mailto:sales@orchestly.ai"
-              method="GET"
-              className="space-y-4"
-            >
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-mono-body mb-1">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  className="w-full rounded-lg border border-gray-200 dark:border-mono-border bg-white dark:bg-mono-surface/40 px-4 py-2.5 text-sm text-gray-900 dark:text-mono-text focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-mono-body mb-1">Work Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  className="w-full rounded-lg border border-gray-200 dark:border-mono-border bg-white dark:bg-mono-surface/40 px-4 py-2.5 text-sm text-gray-900 dark:text-mono-text focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500"
-                  placeholder="you@company.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-mono-body mb-1">Company</label>
-                <input
-                  type="text"
-                  name="company"
-                  className="w-full rounded-lg border border-gray-200 dark:border-mono-border bg-white dark:bg-mono-surface/40 px-4 py-2.5 text-sm text-gray-900 dark:text-mono-text focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500"
-                  placeholder="Company name"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-text transition-all hover:bg-cta-hover hover:shadow-lg hover:shadow-cta/25"
-              >
-                Contact Sales
-              </button>
-            </form>
-          </AnimateIn>
-        </div>
-      </section>
     </>
   );
 }

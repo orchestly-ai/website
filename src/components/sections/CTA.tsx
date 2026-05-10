@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, Mail, CheckCircle, Loader2 } from 'lucide-react';
+import { ArrowRight, CheckCircle, Loader2 } from 'lucide-react';
 import { AnimateIn } from '@/components/ui/AnimateIn';
 
 export function CTA() {
@@ -38,17 +38,16 @@ export function CTA() {
             </div>
 
             <h2 className="text-3xl font-bold text-gray-900 dark:text-mono-text sm:text-4xl">
-              Stay in the loop
+              Request Early Access
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-gray-600 dark:text-mono-body">
-              Get notified about new releases, features, and community events.
-              Monthly updates - no spam.
+              Join the waitlist to get early access to Orchestly. We&apos;ll reach out when your spot is ready.
             </p>
 
             {submitted ? (
               <div className="mt-8 inline-flex items-center gap-2 rounded-lg border border-accent-500/30 bg-accent-500/10 px-6 py-3 text-sm text-accent-600 dark:text-accent-300">
                 <CheckCircle className="h-4 w-4" />
-                You&apos;re subscribed! Watch your inbox for updates.
+                You&apos;re on the list! We&apos;ll be in touch soon.
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="mx-auto mt-8 flex max-w-lg flex-col gap-3">
@@ -86,7 +85,7 @@ export function CTA() {
                     <Loader2 className="h-4 w-4 animate-spin" />
                   ) : (
                     <>
-                      Subscribe
+                      Join Waitlist
                       <ArrowRight className="h-4 w-4" />
                     </>
                   )}
@@ -94,10 +93,6 @@ export function CTA() {
               </form>
             )}
 
-            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-mono-secondary">
-              <Mail className="h-4 w-4" />
-              hello@orchestly.ai
-            </div>
           </div>
         </AnimateIn>
       </div>

@@ -6,7 +6,6 @@ import { HowItWorks } from '@/components/sections/HowItWorks';
 import { Integrations } from '@/components/sections/Integrations';
 import { ROI } from '@/components/sections/ROI';
 import { Testimonials } from '@/components/sections/Testimonials';
-import { CTA } from '@/components/sections/CTA';
 
 export default function HomePage() {
   return (
@@ -19,7 +18,6 @@ export default function HomePage() {
       <Integrations />
       <ROI />
       <Testimonials />
-      <CTA />
     </>
   );
 }

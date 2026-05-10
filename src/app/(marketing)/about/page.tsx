@@ -144,7 +144,7 @@ export default function AboutPage() {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="mailto:hello@orchestly.ai"
+                href="#cta"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 dark:border-mono-border bg-white/50 dark:bg-mono-surface/40 px-6 py-3 text-sm font-medium text-gray-700 dark:text-mono-body transition-all hover:bg-gray-100 dark:hover:bg-mono-surface/60"
               >
                 Get in Touch
