@@ -99,23 +99,56 @@ function TemplatePreviewModal({ template, onClose }: { template: Template; onClo
   );
 }
 
+// Map URL query param slugs to template category names
+const useCaseToCategory: Record<string, string> = {
+  'content-creation': 'Marketing',
+  'customer-support': 'Support',
+  'data-pipeline': 'Data',
+  'document-processing': 'Legal',
+  'code-review': 'Engineering',
+  'lead-qualification': 'Sales',
+};
+
+const industryToCategories: Record<string, string[]> = {
+  'financial-services': ['Finance', 'Legal'],
+  'healthcare': ['Operations', 'Legal', 'Data'],
+  'technology': ['Engineering', 'Data', 'Security'],
+};
+
 function TemplatesContent() {
   const searchParams = useSearchParams();
 
-  const [activeCategory, setActiveCategory] = useState('All');
+  const useCaseParam = searchParams.get('useCase');
+  const industryParam = searchParams.get('industry');
+
+  const [activeCategory, setActiveCategory] = useState(() => {
+    if (useCaseParam && useCaseToCategory[useCaseParam]) {
+      return useCaseToCategory[useCaseParam];
+    }
+    return 'All';
+  });
   const [search, setSearch] = useState('');
   const [previewTemplate, setPreviewTemplate] = useState<Template | null>(null);
 
   const handleClose = useCallback(() => setPreviewTemplate(null), []);
 
   const filtered = useMemo(() => {
+    const industryCategories = industryParam ? industryToCategories[industryParam] : null;
+
     return templates.filter((t) => {
-      const matchCategory = activeCategory === 'All' || t.category === activeCategory || t.team === activeCategory;
+      let matchCategory: boolean;
+      if (industryCategories) {
+        matchCategory = activeCategory === 'All'
+          ? industryCategories.includes(t.category) || industryCategories.includes(t.team)
+          : t.category === activeCategory || t.team === activeCategory;
+      } else {
+        matchCategory = activeCategory === 'All' || t.category === activeCategory || t.team === activeCategory;
+      }
       const matchSearch = !search || t.name.toLowerCase().includes(search.toLowerCase()) || t.description.toLowerCase().includes(search.toLowerCase());
 
       return matchCategory && matchSearch;
     });
-  }, [activeCategory, search]);
+  }, [activeCategory, search, industryParam]);
 
   return (
     <>
