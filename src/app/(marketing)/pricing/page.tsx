@@ -15,7 +15,7 @@ const tiers = [
     features: [
       '1 user',
       '3 active workflows',
-      '500 executions/month',
+      '100 executions/month',
       'All 40+ node types',
       '5 starter templates',
       '2 LLM providers',
@@ -34,7 +34,7 @@ const tiers = [
     popular: true,
     features: [
       '5 users (+ $15/extra)',
-      'Unlimited workflows',
+      '50 workflows',
       '10,000 executions/month',
       'All LLM providers & routing strategies',
       'Full code-canvas sync',
@@ -55,6 +55,7 @@ const tiers = [
     ctaStyle: 'border border-brand-500 bg-white dark:bg-mono-surface/40 text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-mono-surface/60',
     features: [
       '25 users (+ $25/extra)',
+      '200 workflows',
       '50,000 executions/month',
       'Change control with approval gates',
       'SSO / SAML / OIDC',
@@ -74,7 +75,7 @@ const tiers = [
     cta: 'Talk to Sales',
     ctaStyle: 'border border-gray-300 dark:border-mono-border bg-white dark:bg-mono-surface/40 text-gray-700 dark:text-mono-body hover:bg-gray-100 dark:hover:bg-mono-surface/60',
     features: [
-      'Unlimited users & executions',
+      'Custom users & executions',
       'Everything in Business',
       'SOC 2, HIPAA, GDPR, ISO 27001',
       'BYOK encryption',
@@ -105,9 +106,9 @@ const comparisonGroups: ComparisonGroup[] = [
   {
     category: 'Usage & Limits',
     rows: [
-      { feature: 'Active Workflows', free: '3', pro: 'Unlimited', business: 'Unlimited', enterprise: 'Unlimited' },
-      { feature: 'Executions / month', free: '500', pro: '10,000', business: '50,000', enterprise: 'Unlimited' },
-      { feature: 'Team Members', free: '1', pro: '5', business: '25', enterprise: 'Unlimited' },
+      { feature: 'Active Workflows', free: '3', pro: '50', business: '200', enterprise: 'Custom' },
+      { feature: 'Executions / month', free: '100', pro: '10,000', business: '50,000', enterprise: 'Custom' },
+      { feature: 'Team Members', free: '1', pro: '5', business: '25', enterprise: 'Custom' },
     ],
   },
   {
