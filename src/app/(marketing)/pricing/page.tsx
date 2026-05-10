@@ -10,7 +10,7 @@ const tiers = [
     price: '$0',
     period: '',
     description: 'For solo developers and evaluation. Get started with no commitment.',
-    cta: 'Start Free',
+    cta: 'Request Early Access',
     ctaStyle: 'border border-gray-300 dark:border-mono-border bg-white dark:bg-mono-surface/40 text-gray-700 dark:text-mono-body hover:bg-gray-100 dark:hover:bg-mono-surface/60',
     features: [
       '1 user',
@@ -18,7 +18,7 @@ const tiers = [
       '100 executions/month',
       'All 40+ node types',
       '5 starter templates',
-      '2 LLM providers',
+      '2 AI providers',
       '3 integrations',
       'Community support',
     ],
@@ -29,14 +29,14 @@ const tiers = [
     period: '/month',
     annual: '$59/mo billed annually',
     description: 'For small teams building production AI workflows.',
-    cta: 'Start Free Trial',
+    cta: 'Request Early Access',
     ctaStyle: 'bg-cta text-cta-text hover:bg-cta-hover shadow-lg shadow-cta/25',
     popular: true,
     features: [
       '5 users (+ $15/extra)',
       '50 workflows',
       '10,000 executions/month',
-      'All LLM providers & routing strategies',
+      'All AI providers & routing strategies',
       'Full code-canvas sync',
       'All templates',
       'Time-travel debugging',
@@ -51,7 +51,7 @@ const tiers = [
     period: '/month',
     annual: '$299/mo billed annually',
     description: 'For growing teams that need governance, compliance, and advanced features.',
-    cta: 'Start Free Trial',
+    cta: 'Request Early Access',
     ctaStyle: 'border border-brand-500 bg-white dark:bg-mono-surface/40 text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-mono-surface/60',
     features: [
       '25 users (+ $25/extra)',
@@ -123,7 +123,7 @@ const comparisonGroups: ComparisonGroup[] = [
   {
     category: 'Route',
     rows: [
-      { feature: 'LLM Providers', free: '2', pro: 'All 6', business: 'All + custom', enterprise: 'All + private' },
+      { feature: 'AI Providers', free: '2', pro: 'All 6', business: 'All + custom', enterprise: 'All + private' },
       { feature: 'Routing Strategies', free: '2 basic', pro: 'All 7', business: 'All 7 + ML', enterprise: 'All + custom' },
       { feature: 'Integrations', free: '3', pro: 'All 12+', business: 'All + custom HTTP', enterprise: 'Dedicated' },
       { feature: 'HITL Approvals', free: false, pro: false, business: true, enterprise: '+ Escalation chains' },
@@ -247,7 +247,7 @@ export default function PricingPage() {
                   )}
                   <p className="mt-3 text-sm text-gray-600 dark:text-mono-body">{tier.description}</p>
                   <a
-                    href={tier.name === 'Enterprise' ? '/enterprise' : '#cta'}
+                    href="#cta"
                     className={`mt-6 flex w-full items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all ${tier.ctaStyle}`}
                   >
                     {tier.cta}
@@ -338,21 +338,21 @@ export default function PricingPage() {
                   <div className="px-5 py-4" />
                   <div className="px-3 py-4 text-center">
                     <a href="#cta" className="inline-flex items-center justify-center gap-1 rounded-lg border border-gray-200 dark:border-mono-border px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-mono-body hover:bg-gray-100 dark:hover:bg-mono-surface/60 transition-colors">
-                      Get started
+                      Request access
                     </a>
                   </div>
                   <div className="px-3 py-4 text-center bg-brand-50/30 dark:bg-brand-500/[0.03] border-x border-brand-100/50 dark:border-brand-500/5">
                     <a href="#cta" className="inline-flex items-center justify-center gap-1 rounded-lg bg-cta px-3 py-1.5 text-xs font-semibold text-cta-text hover:bg-cta-hover transition-colors shadow-sm">
-                      Start trial
+                      Request access
                     </a>
                   </div>
                   <div className="px-3 py-4 text-center">
                     <a href="#cta" className="inline-flex items-center justify-center gap-1 rounded-lg border border-brand-500 px-3 py-1.5 text-xs font-medium text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-brand-500/10 transition-colors">
-                      Start trial
+                      Request access
                     </a>
                   </div>
                   <div className="px-3 py-4 text-center">
-                    <a href="/enterprise" className="inline-flex items-center justify-center gap-1 rounded-lg border border-gray-200 dark:border-mono-border px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-mono-body hover:bg-gray-100 dark:hover:bg-mono-surface/60 transition-colors">
+                    <a href="#cta" className="inline-flex items-center justify-center gap-1 rounded-lg border border-gray-200 dark:border-mono-border px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-mono-body hover:bg-gray-100 dark:hover:bg-mono-surface/60 transition-colors">
                       Contact sales
                     </a>
                   </div>
@@ -413,7 +413,7 @@ export default function PricingPage() {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="/enterprise"
+                href="#cta"
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-mono-border bg-white/50 dark:bg-mono-surface/40 px-6 py-3 text-sm font-medium text-gray-700 dark:text-mono-body transition-all hover:bg-gray-100 dark:hover:bg-mono-surface/60"
               >
                 Talk to Sales
