@@ -25,13 +25,13 @@ export function MockupLLMRouting() {
           <div className="h-3 w-3 rounded-full bg-yellow-400" />
           <div className="h-3 w-3 rounded-full bg-green-400" />
         </div>
-        <span className="ml-2 text-xs text-gray-500 dark:text-mono-muted font-mono">LLM Routing - orchestly.ai</span>
+        <span className="ml-2 text-xs text-gray-500 dark:text-mono-muted font-mono">AI Routing - orchestly.ai</span>
       </div>
 
       <div className="flex">
         {/* Sidebar */}
         <div className="hidden sm:flex w-48 flex-col border-r border-gray-200 dark:border-mono-border bg-gray-50/50 dark:bg-[#19181a] py-3 px-2">
-          {['Dashboard', 'Workflows', 'LLM Routing', 'Integrations', 'Cost Mgmt', 'Templates', 'Settings'].map((item, i) => (
+          {['Dashboard', 'Workflows', 'AI Routing', 'Integrations', 'Cost Mgmt', 'Templates', 'Settings'].map((item, i) => (
             <div
               key={item}
               className={`px-3 py-1.5 rounded-md text-xs font-medium mb-0.5 ${

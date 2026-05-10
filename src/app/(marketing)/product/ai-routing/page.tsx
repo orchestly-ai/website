@@ -3,10 +3,10 @@
 import { GitBranch, Zap, DollarSign, Shield, BarChart3, RefreshCw } from 'lucide-react';
 import { FeaturePage } from '@/components/product/FeaturePage';
 
-export default function LLMRoutingPage() {
+export default function AIRoutingPage() {
   return (
     <FeaturePage
-      title="LLM Routing"
+      title="AI Routing"
       tagline="Multi-Model Intelligence"
       description="Route every request to the right model based on cost, latency, and quality requirements. Automatic failover ensures your agents never go down."
       heroImage="/images/screenshots/llm-routing-health.png"

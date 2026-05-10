@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Orchestly - AI Workflow Orchestration Platform',
   description:
-    'Build, deploy, and manage AI agent workflows visually. Multi-LLM routing, cost optimization, drag-and-drop workflow designer, and enterprise security in one platform.',
+    'Build, deploy, and manage AI agent workflows visually. Multi-AI routing, cost optimization, drag-and-drop workflow designer, and enterprise security in one platform.',
   metadataBase: new URL('https://orchestly.ai'),
   alternates: {
     canonical: '/',

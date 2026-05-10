@@ -7,7 +7,7 @@ const footerColumns = [
     links: [
       { label: 'Platform Overview', href: '/product' },
       { label: 'Workflow Designer', href: '/product/workflow-designer' },
-      { label: 'LLM Routing', href: '/product/llm-routing' },
+      { label: 'AI Routing', href: '/product/ai-routing' },
       { label: 'Integrations', href: '/product/integrations' },
       { label: 'Templates', href: '/templates' },
       { label: 'Marketplace', href: '/product/marketplace' },

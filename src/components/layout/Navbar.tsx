@@ -25,7 +25,7 @@ interface NavDropdown {
 
 const productFeatures: DropdownItem[] = [
   { label: 'Workflow Designer', href: '/product/workflow-designer', description: 'Visual drag-and-drop canvas', icon: Workflow },
-  { label: 'LLM Routing', href: '/product/llm-routing', description: 'Multi-model routing & failover', icon: GitBranch },
+  { label: 'AI Routing', href: '/product/ai-routing', description: 'Multi-model routing & failover', icon: GitBranch },
   { label: 'Change Control', href: '/product/change-control', description: 'Versioning & approval gates', icon: Clock },
   { label: 'Integrations', href: '/product/integrations', description: '57+ pre-built connectors', icon: Zap },
   { label: 'Marketplace', href: '/product/marketplace', description: 'Agent registry & templates', icon: Store },

@@ -428,7 +428,7 @@ export default function DeckPage() {
           </StaggerIn>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { icon: GitBranch, title: 'Multi-LLM Routing', desc: 'Route to the optimal model based on cost, latency, and capability. Automatic failover and load balancing.' },
+              { icon: GitBranch, title: 'Multi-AI Routing', desc: 'Route to the optimal model based on cost, latency, and capability. Automatic failover and load balancing.' },
               { icon: Workflow, title: 'Workflow Automation', desc: 'Build complex agent pipelines with a visual DAG builder. Chain agents, add conditions, handle errors.' },
               { icon: BarChart3, title: 'Cost Intelligence', desc: 'Real-time per-agent, per-model spend tracking. Budget alerts and automatic cost optimization.' },
             ].map((item, i) => (
@@ -600,7 +600,7 @@ export default function DeckPage() {
           </StaggerIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { icon: GitBranch, title: 'Multi-LLM Routing', desc: 'Intelligent routing with automatic failover across OpenAI, Anthropic, Google, and more.' },
+              { icon: GitBranch, title: 'Multi-AI Routing', desc: 'Intelligent routing with automatic failover across OpenAI, Anthropic, Google, and more.' },
               { icon: Workflow, title: 'Visual Workflow Builder', desc: 'DAG-based pipeline builder for complex multi-agent workflows with error handling.' },
               { icon: Store, title: 'Agent Marketplace', desc: 'Discover, publish, and reuse agents across your org with version control.' },
               { icon: DollarSign, title: 'Cost Optimization', desc: 'Real-time spend tracking with budget alerts and automatic model optimization.' },

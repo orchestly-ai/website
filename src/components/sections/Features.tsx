@@ -12,10 +12,10 @@ const features = [
   },
   {
     icon: GitBranch,
-    title: 'Multi-LLM Routing & Failover',
+    title: 'Multi-AI Routing & Failover',
     description:
       'Route requests to the optimal model based on cost, latency, and capability. Automatic failover keeps your agents running.',
-    href: '/product/llm-routing',
+    href: '/product/ai-routing',
   },
   {
     icon: Clock,
