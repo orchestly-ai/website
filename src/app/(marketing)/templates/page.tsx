@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useState, useMemo, useCallback } from 'react';
+import { Suspense, useState, useMemo, useEffect, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Search, ArrowRight, X, Eye } from 'lucide-react';
 import Image from 'next/image';
