@@ -34,11 +34,6 @@ export default function CostManagementPage() {
       ]}
       sections={[
         {
-          title: 'Know where every dollar goes',
-          description: 'LLM costs can spiral fast. Orchestly gives you granular, real-time visibility into spending across every model and provider. Set hard limits before costs surprise you and get actionable recommendations to optimize spending.',
-          image: '/images/screenshots/cost-management.png',
-        },
-        {
           title: 'Optimize without compromising quality',
           description: 'Our cost optimization engine analyzes your usage patterns and suggests model swaps that maintain output quality while reducing costs. Route routine tasks to cheaper models and reserve premium models for complex work.',
           image: '/images/screenshots/dashboard-overview.png',
