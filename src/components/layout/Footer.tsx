@@ -36,11 +36,6 @@ const footerColumns = [
     heading: 'Resources',
     links: [
       { label: 'Blog (Coming soon)', href: '#' },
-      { label: 'vs n8n', href: '/compare/n8n' },
-      { label: 'vs Dify', href: '/compare/dify' },
-      { label: 'vs LangChain', href: '/compare/langchain' },
-      { label: 'vs Zapier', href: '/compare/zapier' },
-      { label: 'vs Portkey', href: '/compare/portkey' },
     ],
   },
   {

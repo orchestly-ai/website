@@ -91,11 +91,6 @@ const navItems: NavDropdown[] = [
         items: [
           { label: 'About', href: '/about', description: 'Our story & mission', icon: Users },
           { label: 'Blog', href: '#', description: 'Coming soon', icon: BookOpen },
-          { label: 'vs n8n', href: '/compare/n8n', icon: ArrowRight },
-          { label: 'vs Dify', href: '/compare/dify', icon: ArrowRight },
-          { label: 'vs LangChain', href: '/compare/langchain', icon: ArrowRight },
-          { label: 'vs Zapier', href: '/compare/zapier', icon: ArrowRight },
-          { label: 'vs Portkey', href: '/compare/portkey', icon: ArrowRight },
         ],
       },
     ],
