@@ -72,8 +72,8 @@ const tiers = [
     price: 'Custom',
     period: '',
     description: 'For regulated enterprises needing VPC, compliance certifications, and dedicated support.',
-    cta: 'Talk to Sales',
-    ctaStyle: 'border border-gray-300 dark:border-mono-border bg-white dark:bg-mono-surface/40 text-gray-700 dark:text-mono-body hover:bg-gray-100 dark:hover:bg-mono-surface/60',
+    cta: 'Request Early Access',
+    ctaStyle: 'bg-cta text-cta-text hover:bg-cta-hover hover:shadow-lg hover:shadow-cta/25',
     features: [
       'Custom users & executions',
       'Everything in Business',
@@ -157,7 +157,7 @@ const comparisonGroups: ComparisonGroup[] = [
 const faqs = [
   {
     q: 'Can I try Pro or Business features before committing?',
-    a: 'Yes - every new account gets a 14-day free trial of Pro with full access to all features. No credit card required. Contact sales for a Business trial.',
+    a: 'Yes - every new account gets a 14-day free trial of Pro with full access to all features. No credit card required. Request early access for a Business trial.',
   },
   {
     q: 'What counts as an "execution"?',
@@ -169,7 +169,7 @@ const faqs = [
   },
   {
     q: 'Do you offer discounts for startups or non-profits?',
-    a: 'Yes - we offer 50% off Pro for startups (under $5M raised) and 40% off for registered non-profits. Contact sales to apply.',
+    a: 'Yes - we offer 50% off Pro for startups (under $5M raised) and 40% off for registered non-profits. Request early access to apply.',
   },
   {
     q: 'What happens when I exceed my execution limit?',
@@ -353,7 +353,7 @@ export default function PricingPage() {
                   </div>
                   <div className="px-3 py-4 text-center">
                     <a href="#cta" className="inline-flex items-center justify-center gap-1 rounded-lg border border-gray-200 dark:border-mono-border px-3 py-1.5 text-xs font-medium text-gray-600 dark:text-mono-body hover:bg-gray-100 dark:hover:bg-mono-surface/60 transition-colors">
-                      Contact sales
+                      Request access
                     </a>
                   </div>
                 </div>
@@ -404,19 +404,13 @@ export default function PricingPage() {
             <p className="mt-4 text-gray-600 dark:text-mono-body">
               No credit card required. Upgrade when you&apos;re ready.
             </p>
-            <div className="mt-8 flex justify-center gap-4">
+            <div className="mt-8 flex justify-center">
               <a
                 href="#cta"
                 className="inline-flex items-center gap-2 rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-cta-text transition-all hover:bg-cta-hover hover:shadow-lg hover:shadow-cta/25"
               >
                 Request Early Access
                 <ArrowRight className="h-4 w-4" />
-              </a>
-              <a
-                href="#cta"
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-mono-border bg-white/50 dark:bg-mono-surface/40 px-6 py-3 text-sm font-medium text-gray-700 dark:text-mono-body transition-all hover:bg-gray-100 dark:hover:bg-mono-surface/60"
-              >
-                Talk to Sales
               </a>
             </div>
           </AnimateIn>
