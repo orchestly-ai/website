@@ -1,4 +1,4 @@
-import { GitBranch, Workflow, Store, DollarSign, Shield, Zap, Clock, Activity, ArrowRight } from 'lucide-react';
+import { GitBranch, Workflow, Store, DollarSign, Shield, Zap, Clock, Activity, ArrowRight, Bot, ShieldCheck } from 'lucide-react';
 import { AnimateIn } from '@/components/ui/AnimateIn';
 import Link from 'next/link';
 
@@ -30,6 +30,20 @@ const features = [
     description:
       'Connect 57+ services out of the box - LLM providers, databases, SaaS tools, and APIs. Managed OAuth and one-click setup.',
     href: '/product/integrations',
+  },
+  {
+    icon: Bot,
+    title: 'Autonomous Agents',
+    description:
+      'Deploy goal-driven AI agents with policies, teams, credential brokering, and version-tracked sessions. Full lifecycle management.',
+    href: '/product/autonomous-agents',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Guardrails & Safety',
+    description:
+      'Configurable safety layer for LLM inputs and outputs. PII redaction, prompt injection blocking, toxicity filtering, and execution logging.',
+    href: '/product/guardrails',
   },
   {
     icon: Store,

@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Menu, X, Layers, Sun, Moon, ChevronDown, ChevronRight,
   Workflow, GitBranch, Clock, Zap, Store, Activity, DollarSign, Shield,
   BookOpen, Code, FileText, Briefcase, Building2, Stethoscope, Cpu, ArrowRight,
-  Users, Globe
+  Users, Globe, Bot, ShieldCheck
 } from 'lucide-react';
 import Link from 'next/link';
 import { useTheme } from '@/components/ui/ThemeProvider';
@@ -30,6 +30,8 @@ const productFeatures: DropdownItem[] = [
   { label: 'Integrations', href: '/product/integrations', description: '57+ pre-built connectors', icon: Zap },
   { label: 'Marketplace', href: '/product/marketplace', description: 'Agent registry & templates', icon: Store },
   { label: 'Time-Travel', href: '/product/time-travel', description: 'Execution replay & debugging', icon: Activity },
+  { label: 'Autonomous Agents', href: '/product/autonomous-agents', description: 'Goal-driven agent runtime', icon: Bot },
+  { label: 'Guardrails', href: '/product/guardrails', description: 'LLM safety & compliance', icon: ShieldCheck },
   { label: 'Cost Management', href: '/product/cost-management', description: 'Budget tracking & alerts', icon: DollarSign },
   { label: 'Security', href: '/product/security', description: 'SSO, RBAC, encryption', icon: Shield },
 ];
